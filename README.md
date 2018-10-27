@@ -1,2 +1,36 @@
-# generator-ConstructFrontend
-A Frontend Library For Construct Digital
+# generator-construct-frontend [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+> A Frontend Library for Construct Digital
+
+## Installation
+
+First, install [Yeoman](http://yeoman.io) and generator-construct-frontend using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+
+```bash
+npm install -g yo
+npm install -g generator-construct-frontend
+```
+
+Then generate your new project:
+
+```bash
+yo construct-frontend
+```
+
+## Getting To Know Yeoman
+
+ * Yeoman has a heart of gold.
+ * Yeoman is a person with feelings and opinions, but is very easy to work with.
+ * Yeoman can be too opinionated at times but is easily convinced not to be.
+ * Feel free to [learn more about Yeoman](http://yeoman.io/).
+
+## License
+
+MIT © [Minh Le]()
+
+
+[npm-image]: https://badge.fury.io/js/generator-construct-frontend.svg
+[npm-url]: https://npmjs.org/package/generator-construct-frontend
+[travis-image]: https://travis-ci.org/https://github.com/libraminh/generator-ConstructFrontend.git/generator-construct-frontend.svg?branch=master
+[travis-url]: https://travis-ci.org/https://github.com/libraminh/generator-ConstructFrontend.git/generator-construct-frontend
+[daviddm-image]: https://david-dm.org/https://github.com/libraminh/generator-ConstructFrontend.git/generator-construct-frontend.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/https://github.com/libraminh/generator-ConstructFrontend.git/generator-construct-frontend

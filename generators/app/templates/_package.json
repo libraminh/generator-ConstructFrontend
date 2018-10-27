@@ -1,0 +1,38 @@
+{
+  "name": "gulp-babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Minh Le",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    <% if (includeBootstrap) { %>
+    "bootstrap": "<%= legacyBootstrap %>" ,
+    <% } %>
+    "browser-sync": "^2.23.6",
+    <% if (includeFontAwesome) { %>
+    "font-awesome": "^4.7.0",
+    <% } %>
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    <% if (includePug) { %>
+    "gulp-pug": "^3.3.0",
+    <% } %>
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    <% if (includeJQuery) { %>
+      "jquery": "^3.3.1",
+    <% } %>
+    "merge-stream": "^1.0.1"
+  },
+  "dependencies": {}
+}

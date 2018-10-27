@@ -1,0 +1,14 @@
+header {
+  color: red;
+  background: $primary-color;
+  padding: 20px;
+}
+
+navbar {
+  color: green;
+  padding: 20px;
+
+  .navbar-nav {
+    margin: 10px;
+  }
+}

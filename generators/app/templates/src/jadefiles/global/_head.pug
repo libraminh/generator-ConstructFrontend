@@ -1,0 +1,24 @@
+doctype html
+html(class="no-js" lang="en")
+  head
+    meta(charset='utf-8')
+    //if IE 
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    title <%= elementName %>
+    |     
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |
+    |
+    // Place favicon.ico in the root directory
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    link(rel='icon', href='favicon.ico')
+    |
+    |
+    // Add Local Css
+    <% if (includeBootstrap) { %>
+    link(rel='stylesheet', href='assets/vendor/bootstrap.min.css')<% } %>
+    <% if (includeFontAwesome) { %>
+    link(rel='stylesheet', href='assets/vendor/font-awesome.min.css')<% } %>
+    link(rel='stylesheet', href='assets/css/main.css')
