@@ -14,9 +14,13 @@ import browserSync from "browser-sync";
 browserSync.create();
 const root = "node_modules";
 
+// Config for build destination
+let build_html_destination = "dist"
+let build_assets_destination = `${build_html_destination}/assets`
+
 // Declare gulp task
 gulp.task("copyHtml", function() {
-  return gulp.src("src/*.html").pipe(gulp.dest("dist"));
+  return gulp.src("src/*.html").pipe(gulp.dest(build_html_destination));
 });
 
 gulp.task("vendor", () => {
@@ -32,7 +36,7 @@ gulp.task("vendor", () => {
       
       "src/assets/vendor/**/*"
     ])
-    .pipe(gulp.dest("dist/assets/vendor"));
+    .pipe(gulp.dest(`${build_assets_destination}/vendor`));
 });
 
 <% if (includeFontAwesome) { %>
@@ -40,10 +44,10 @@ gulp.task("fonts", function() {
   // return gulp
   gulp
     .src([root + "/font-awesome/fonts/fontawesome-webfont.*"])
-    .pipe(gulp.dest("dist/assets/fonts"));
+    .pipe(gulp.dest(`${build_assets_destination}/fonts`));
   gulp
     .src([root + "/font-awesome/css/font-awesome.min.css"])
-    .pipe(gulp.dest("dist/assets/vendor"));
+    .pipe(gulp.dest(`${build_assets_destination}/vendor`));
 });
 <% } %>
 
@@ -56,14 +60,14 @@ gulp.task("pug", () => {
         pretty: true
       })
     )
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest(build_html_destination));
 });
 <% } %>
 
 gulp.task("image", function() {
   return gulp
     .src("src/assets/images/**/*")
-    .pipe(gulp.dest("dist/assets/images"));
+    .pipe(gulp.dest(`${build_assets_destination}/images`));
 });
 
 gulp.task("sass", () => {
@@ -82,7 +86,7 @@ gulp.task("sass", () => {
       })
     )
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("dist/assets/css"))
+    .pipe(gulp.dest(`${build_assets_destination}/css`))
     .pipe(browserSync.stream());
 });
 
@@ -94,7 +98,7 @@ gulp.task("script", () => {
       .pipe(babel())
       .pipe(uglify())
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest("dist/assets/js"))
+      .pipe(gulp.dest(`${build_assets_destination}/js`))
       .pipe(browserSync.stream())
   );
 });
@@ -122,7 +126,6 @@ gulp.task("serve", ["sass"], () => {
 
 gulp.task("default", [
   "copyHtml",
-  "image",
   "script",
   <% if (includeFontAwesome) { %>
   "fonts",
@@ -131,5 +134,5 @@ gulp.task("default", [
   <% if (includePug) { %>
   "pug",
   <% } %>
-  "serve"
+  "image"
 ]);
