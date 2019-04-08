@@ -1,4 +1,4 @@
-# generator-construct-frontend [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-construct-frontend [![NPM version][npm-image]][npm-url] 
 > A Frontend Library for Construct Digital
 
 ## Installation
@@ -16,21 +16,15 @@ Then generate your new project:
 yo construct-frontend
 ```
 
-## Getting To Know Yeoman
+## Configurations
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+ * Build Destination
+ Enter `gulpfile.babel.js` then edit wherever you want:
+
+```
+let build_html_destination = "dist" ("./" for root destination)
+```
 
 ## License
 
 MIT © [Minh Le]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-construct-frontend.svg
-[npm-url]: https://npmjs.org/package/generator-construct-frontend
-[travis-image]: https://travis-ci.org/https://github.com/libraminh/generator-ConstructFrontend.git/generator-construct-frontend.svg?branch=master
-[travis-url]: https://travis-ci.org/https://github.com/libraminh/generator-ConstructFrontend.git/generator-construct-frontend
-[daviddm-image]: https://david-dm.org/https://github.com/libraminh/generator-ConstructFrontend.git/generator-construct-frontend.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/https://github.com/libraminh/generator-ConstructFrontend.git/generator-construct-frontend
